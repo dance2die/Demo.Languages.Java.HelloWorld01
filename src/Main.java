@@ -1,3 +1,6 @@
+import Extend.*;
+import static java.lang.System.out;
+
 public class Main {
     public static void main(String[] args) {
 //        for (String arg : args) {
@@ -5,13 +8,26 @@ public class Main {
 //        }
 //        testSavingsAccount();
 //        testVargs();
+//        testStaticBlock();
+        testInheritance();
+    }
 
-        testStaticBlock();
+    private static void testInheritance() {
+        Employee e1 = new Employee("Michael", "Reddy", 222);
+        Employee e2 = new Employee("James", "Dean", 333);
+        Employee e3 = new Employee("Calvin", "Klein", 444);
+
+        printEmployee(e1);
+        printEmployee(e2);
+        printEmployee(e3);
+    }
+
+    private static void printEmployee(Employee employee) {
+        out.println(String.format("First Name: %s, Last Name: %s, ID: %d", employee.getFirstName(), employee.getLastName(), employee.getId()));
     }
 
     private static void testStaticBlock() {
         StaticClass staticClass = new StaticClass();
-
     }
 
     private static void testVargs() {
