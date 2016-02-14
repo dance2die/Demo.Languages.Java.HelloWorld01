@@ -9,7 +9,15 @@ public class Main {
 //        testSavingsAccount();
 //        testVargs();
 //        testStaticBlock();
-        testInheritance();
+//        testInheritance();
+        testCloneable();
+    }
+
+    private static void testCloneable() {
+        Person p1 = new Person("First", "Last");
+        Person p2 = (Person) p1.clone();
+        out.println(p1 == p2);
+        out.println(p1.getFirstName() == p2.getFirstName());
     }
 
     private static void testInheritance() {
@@ -23,7 +31,8 @@ public class Main {
     }
 
     private static void printEmployee(Employee employee) {
-        out.println(String.format("First Name: %s, Last Name: %s, ID: %d", employee.getFirstName(), employee.getLastName(), employee.getId()));
+        out.println(String.format("First Name: %s, Last Name: %s, ID: %d",
+                employee.getFirstName(), employee.getLastName(), employee.getId()));
     }
 
     private static void testStaticBlock() {

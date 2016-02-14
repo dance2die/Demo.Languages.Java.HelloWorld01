@@ -3,7 +3,7 @@ package Extend;
 /**
  * Created by dance2die on 2/13/2016.
  */
-public class Person {
+public class Person implements Cloneable {
     protected String firstName;
     protected String lastName;
 
@@ -26,5 +26,13 @@ public class Person {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public Object clone(){
+        try{
+            return super.clone();
+        }catch(Exception e){
+            return null;
+        }
     }
 }
