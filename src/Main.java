@@ -2,7 +2,7 @@ import Extend.*;
 import static java.lang.System.out;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CloneNotSupportedException {
 //        for (String arg : args) {
 //            out.println(arg);
 //        }
@@ -13,7 +13,7 @@ public class Main {
         testCloneable();
     }
 
-    private static void testCloneable() {
+    private static void testCloneable() throws CloneNotSupportedException {
         Person p1 = new Person("First", "Last");
         Person p2 = (Person) p1.clone();
         out.println(p1 == p2);

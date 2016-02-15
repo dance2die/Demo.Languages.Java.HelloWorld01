@@ -28,11 +28,7 @@ public class Person implements Cloneable {
         this.lastName = lastName;
     }
 
-    public Object clone(){
-        try{
-            return super.clone();
-        }catch(Exception e){
-            return null;
-        }
+    public Object clone() throws CloneNotSupportedException{
+        return super.clone();
     }
 }
