@@ -1,5 +1,6 @@
 import Extend.*;
 import anonymous.Speaker;
+import annotations.*;
 
 import static java.lang.System.out;
 
@@ -15,13 +16,15 @@ public class Main {
 //        testCloneable();
 //        testAnoymousClass();
 
-        testAssert1();
+//        testAssert1();
 
+        
     }
 
+    @Deprecated
     private static void testAssert1() {
         int x = 0;
-        assert x == 1 : "X must be 1!!!";
+//        assert x == 1 : "X must be 1!!!";
     }
 
     private static void testAnoymousClass() {
