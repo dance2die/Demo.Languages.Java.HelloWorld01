@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 /**
  * Created by dance2die on 2/16/2016.
  */
-@Target(value = {ElementType.CONSTRUCTOR, ElementType.METHOD})
+@Target(value = {ElementType.CONSTRUCTOR, ElementType.METHOD, ElementType.TYPE})
 @Retention(value= RetentionPolicy.SOURCE)
 public @interface Stub {
     int id();
