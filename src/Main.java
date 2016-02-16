@@ -5,7 +5,7 @@ import annotations.*;
 import static java.lang.System.out;
 
 public class Main {
-    public static void main(@Stub(id=3, dueDate = "11/11/2060")String[] args) throws CloneNotSupportedException {
+    public static void main(String[] args) throws CloneNotSupportedException {
 //        for (String arg : args) {
 //            out.println(arg);
 //        }
