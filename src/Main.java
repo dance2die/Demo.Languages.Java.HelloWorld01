@@ -2,10 +2,13 @@ import Extend.*;
 import anonymous.Speaker;
 import annotations.*;
 
+import java.lang.reflect.Method;
+
 import static java.lang.System.out;
 
 public class Main {
-    public static void main(String[] args) throws CloneNotSupportedException {
+    public static void main(String[] args)
+            throws CloneNotSupportedException, ClassNotFoundException {
 //        for (String arg : args) {
 //            out.println(arg);
 //        }
@@ -18,7 +21,22 @@ public class Main {
 
 //        testAssert1();
 
+        testProcessingAnnotation();
+    }
 
+    private static void testProcessingAnnotation() throws ClassNotFoundException {
+        Method[] methods = Class.forName("Extend.Employee").getMethods();
+        for (int i = 0; i< methods.length; i++){
+            if (methods[i].isAnnotationPresent(Stub.class)){
+                Stub stub = methods[i].getAnnotation(Stub.class);
+                int id = stub.id();
+                String date = stub.dueDate();
+                String developer = stub.developer();
+                out.println("Stub ID = " + id);
+                out.println("Stub date = " + date);
+                out.println("Stub developer = " + developer);
+            }
+        }
     }
 
     @Deprecated

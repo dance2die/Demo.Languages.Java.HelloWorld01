@@ -7,7 +7,6 @@ import annotations.Stub;
  */
 @Stub(id = 1, dueDate = "11/25/2016")
 public class Employee extends Person {
-    @Deprecated
     private int id;
 
     public Employee(String firstName, String lastName, int id) {
