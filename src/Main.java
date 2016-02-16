@@ -21,7 +21,7 @@ public class Main {
 
     private static void testAssert1() {
         int x = 0;
-        assert x == 1;
+        assert x == 1 : "X must be 1!!!";
     }
 
     private static void testAnoymousClass() {
