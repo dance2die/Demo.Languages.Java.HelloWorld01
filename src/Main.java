@@ -1,4 +1,6 @@
 import Extend.*;
+import anonymous.Speaker;
+
 import static java.lang.System.out;
 
 public class Main {
@@ -10,7 +12,27 @@ public class Main {
 //        testVargs();
 //        testStaticBlock();
 //        testInheritance();
-        testCloneable();
+//        testCloneable();
+//        testAnoymousClass();
+
+        testAssert1();
+
+    }
+
+    private static void testAssert1() {
+        int x = 0;
+        assert x == 1;
+    }
+
+    private static void testAnoymousClass() {
+        new Speaker(){
+            String message = "This is inside an anoymous class";
+
+            @Override
+            public void speak(){
+                out.println("message = " + message);
+            }
+        }.speak();
     }
 
     private static void testCloneable() throws CloneNotSupportedException {
