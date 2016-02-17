@@ -23,10 +23,23 @@ public class Main {
 //        testAnoymousClass();
 //        testAssert1();
 //        testProcessingAnnotation();
-        testGenerics();
+//        testGenerics();
+        testEnums();
 
 
+    }
 
+    enum Coin {PENNY, NICKEL, DIME, QUARTER}
+
+    private static void testEnums() {
+        Coin coin = Coin.NICKEL;
+        switch (coin){
+            case PENNY: out.println("1 cent"); break;
+            case NICKEL: out.println("5 cents"); break;
+            case DIME: out.println("10 cents"); break;
+            case QUARTER: out.println("25 cents"); break;
+            default: assert false;
+        }
     }
 
     private static void testGenerics() {
