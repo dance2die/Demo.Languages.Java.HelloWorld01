@@ -3,6 +3,9 @@ import anonymous.Speaker;
 import annotations.*;
 
 import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 import static java.lang.System.out;
 
@@ -18,10 +21,25 @@ public class Main {
 //        testInheritance();
 //        testCloneable();
 //        testAnoymousClass();
-
 //        testAssert1();
+//        testProcessingAnnotation();
+        testGenerics();
 
-        testProcessingAnnotation();
+
+
+    }
+
+    private static void testGenerics() {
+        List<Employee> employees = new ArrayList<Employee>();
+        employees.add(new Employee("F1", "L1", 1));
+        employees.add(new Employee("F2", "L2", 2));
+        employees.add(new Employee("F3", "L3", 3));
+
+        Iterator<Employee> iterator = employees.iterator();
+        while(iterator.hasNext()){
+            Employee employee = iterator.next();
+            out.println(employee.getName());
+        }
     }
 
     private static void testProcessingAnnotation() throws ClassNotFoundException {

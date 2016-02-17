@@ -23,4 +23,9 @@ public class Employee extends Person {
     public void setId(int id) {
         this.id = id;
     }
+
+    @Stub(id = 4, dueDate = "12/26/2016")
+    public String getName() {
+        return getFirstName() + " " + getLastName();
+    }
 }
