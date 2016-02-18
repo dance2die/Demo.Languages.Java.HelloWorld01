@@ -24,9 +24,17 @@ public class Main {
 //        testAssert1();
 //        testProcessingAnnotation();
 //        testGenerics();
-        testEnums();
+//        testEnums();
+        testStringComparison();
 
+    }
 
+    private static void testStringComparison() {
+        out.println("abc".length());
+        out.println("abc" instanceof String);
+        out.println("abc" == "a" + "bc");
+        out.println("abc" == new String("abc"));
+        out.println("abc" == new String("abc").intern());
     }
 
     enum Coin {PENNY, NICKEL, DIME, QUARTER}
