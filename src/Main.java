@@ -26,11 +26,29 @@ public class Main {
 //        testGenerics();
 //        testEnums();
 //        testStringComparison();
-        testJavaProperties();
+//        testJavaProperties();
+        testRunnable();
 
 
 
+    }
 
+    private static void testRunnable() {
+        Runnable r = new Runnable() {
+            @Override
+            public void run() {
+                String name = Thread.currentThread().getName();
+                int count = 0;
+                while (true){
+                    out.println(name + ": " + count++);
+                }
+            }
+        };
+
+        Thread t1 = new Thread(r);
+        Thread t2 = new Thread(r);
+        t1.start();
+        t2.start();
     }
 
     private static void testJavaProperties() {
@@ -47,9 +65,8 @@ public class Main {
                         "path.separator",
                         "user.dir"
                 };
-        for (int i = 0; i < propNames.length; i++)
-            System.out.println(propNames[i] + ": " +
-                    System.getProperty(propNames[i]));
+        for (String propName : propNames)
+            System.out.println(propName + ": " + System.getProperty(propName));
     }
 
     private static void testStringComparison() {
