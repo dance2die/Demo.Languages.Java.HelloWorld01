@@ -25,8 +25,31 @@ public class Main {
 //        testProcessingAnnotation();
 //        testGenerics();
 //        testEnums();
-        testStringComparison();
+//        testStringComparison();
+        testJavaProperties();
 
+
+
+
+    }
+
+    private static void testJavaProperties() {
+        String[] propNames =
+                {
+                        "file.separator",
+                        "java.class.path",
+                        "java.home",
+                        "java.io.tmpdir",
+                        "java.library.path",
+                        "line.separator",
+                        "os.arch",
+                        "os.name",
+                        "path.separator",
+                        "user.dir"
+                };
+        for (int i = 0; i < propNames.length; i++)
+            System.out.println(propNames[i] + ": " +
+                    System.getProperty(propNames[i]));
     }
 
     private static void testStringComparison() {
