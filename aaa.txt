@@ -1,0 +1,43 @@
+J9NHUQEXZV
+
+var Card = React.createClass(function() {
+	render: function() {
+		<div>
+			<img src="" />
+			<h3>Name Here</h3>
+			<hr />
+		</div>
+	}
+});
+
+var Main = React.createClass(function() {
+	render: function() {
+		return (
+			<div>
+				<Card />
+			</div>
+		);
+	}	
+});
+
+React.render(<Main />, document.getElementById("root"));
+
+
+
+
+
+
+
+
+
+
+
+
+ 1 (800) 685-0935
+
+
+
+
+
+
+
